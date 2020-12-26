@@ -1,0 +1,31 @@
+/* tslint:disable */
+/* eslint-disable */
+
+import React, { FunctionComponent } from 'react';
+import { ViewProps } from 'react-native';
+import { Svg, GProps, Path } from 'react-native-svg';
+import { getIconColor } from './helper';
+
+interface Props extends GProps, ViewProps {
+  size?: number;
+  color?: string | string[];
+}
+
+let IcondingweiDitu1X: FunctionComponent<Props> = ({ size, color, ...rest }) => {
+  return (
+    <Svg viewBox="0 0 1024 1024" width={size} height={size} {...rest}>
+      <Path
+        d="M512 53.333333a32 32 0 0 1 31.701333 27.648L544 85.333333v11.861334a416.085333 416.085333 0 0 1 382.805333 382.848L938.666667 480a32 32 0 0 1 4.352 63.701333L938.666667 544h-11.861334a416.085333 416.085333 0 0 1-382.805333 382.805333V938.666667a32 32 0 0 1-63.701333 4.352L480 938.666667v-11.861334a416.085333 416.085333 0 0 1-382.805333-382.805333H85.333333a32 32 0 0 1-4.352-63.701333L85.333333 480h11.861334a416.085333 416.085333 0 0 1 382.848-382.805333L480 85.333333a32 32 0 0 1 32-32z m-32 108.117334a352.085333 352.085333 0 0 0-318.549333 318.549333H213.333333a32 32 0 0 1 4.352 63.701333L213.333333 544H161.450667a352.085333 352.085333 0 0 0 318.549333 318.549333V810.666667a32 32 0 0 1 63.701333-4.352l0.298667 4.352v51.882666a352.128 352.128 0 0 0 318.549333-318.506666L810.666667 544a32 32 0 0 1-4.352-63.701333L810.666667 480h51.882666a352.085333 352.085333 0 0 0-318.506666-318.549333L544 213.333333a32 32 0 0 1-63.701333 4.352L480 213.333333V161.450667zM512 426.666667a85.333333 85.333333 0 1 1 0 170.666666 85.333333 85.333333 0 0 1 0-170.666666z"
+        fill={getIconColor(color, 0, '#131A25')}
+      />
+    </Svg>
+  );
+};
+
+IcondingweiDitu1X.defaultProps = {
+  size: 18,
+};
+
+IcondingweiDitu1X = React.memo ? React.memo(IcondingweiDitu1X) : IcondingweiDitu1X;
+
+export default IcondingweiDitu1X;

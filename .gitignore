@@ -1,0 +1,20 @@
+node_modules/**/*
+.expo/*
+.yapi
+npm-debug.*
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+*.orig.*
+*.log
+*.http
+web-build/
+web-report/
+yapi-swagger.json
+.vscode/.react
+
+# macOS
+.DS_Store
+

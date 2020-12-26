@@ -1,0 +1,31 @@
+/* tslint:disable */
+/* eslint-disable */
+
+import React, { FunctionComponent } from 'react';
+import { ViewProps } from 'react-native';
+import { Svg, GProps, Path } from 'react-native-svg';
+import { getIconColor } from './helper';
+
+interface Props extends GProps, ViewProps {
+  size?: number;
+  color?: string | string[];
+}
+
+let Iconbiaoqing: FunctionComponent<Props> = ({ size, color, ...rest }) => {
+  return (
+    <Svg viewBox="0 0 1024 1024" width={size} height={size} {...rest}>
+      <Path
+        d="M512 0c282.781538 0 512 229.218462 512 512s-229.218462 512-512 512S0 794.781538 0 512 229.218462 0 512 0z m0 59.076923C261.868308 59.076923 59.076923 261.868308 59.076923 512S261.868308 964.923077 512 964.923077 964.923077 762.131692 964.923077 512 762.131692 59.076923 512 59.076923z m111.379692 608.098462L665.206154 708.923077l-20.873846 20.873846a187.076923 187.076923 0 0 1-258.363077 5.907692l-6.222769-5.907692-20.873847-20.873846 41.747693-41.747692 20.873846 20.873846a128 128 0 0 0 175.773538 4.962461l5.277539-4.962461 20.873846-20.873846zM290.461538 355.052308l111.379693 111.419077a29.538462 29.538462 0 0 1 2.678154 38.754461l-2.678154 2.993231-111.379693 111.419077-41.747692-41.747692 90.466462-90.545231-90.505846-90.505846 41.787076-41.747693z m472.615385 0l41.747692 41.747692-90.466461 90.545231 90.505846 90.505846-41.787077 41.747692-111.379692-111.379692a29.538462 29.538462 0 0 1-2.678154-38.754462l2.678154-2.99323 111.379692-111.419077z"
+        fill={getIconColor(color, 0, '#131A25')}
+      />
+    </Svg>
+  );
+};
+
+Iconbiaoqing.defaultProps = {
+  size: 18,
+};
+
+Iconbiaoqing = React.memo ? React.memo(Iconbiaoqing) : Iconbiaoqing;
+
+export default Iconbiaoqing;

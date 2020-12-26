@@ -1,0 +1,7 @@
+{
+    "symbol_url": "https://at.alicdn.com/t/font_1871451_rzgfs7bmdns.js",
+    "use_typescript": true,
+    "save_dir": "./components/Iconfont",
+    "trim_icon_prefix": "icon",
+    "default_icon_size": 18
+}

@@ -1,0 +1,8 @@
+{
+  "url": "yapi-swagger.json",
+  "remoteUrl": "https://yapi.aoidc.net/api/open/plugin/export-full?type=json&pid=123&status=all&token=729cce15c2a853a6c199f18c4f44fa7ce9cd88a7dd7d8b2a667cdfd8fe23075d",
+  "type": "yapi",
+  "swaggerParser": {
+    "-o":".yapi"
+  }
+}
